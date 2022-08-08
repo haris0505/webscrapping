@@ -43,7 +43,7 @@ public class Locaters {
 
     }
 
-    // todo tagname[@attribute='value'] , tagName#id ,tag.classname
+    // todo tagname[attribute='value'] , tagName#id ,tag.classname
     public WebElement getElementByCss(String css){
         return  webDriver.findElement(By.cssSelector(css));
 
