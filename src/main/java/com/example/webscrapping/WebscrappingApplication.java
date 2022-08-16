@@ -1,6 +1,9 @@
 package com.example.webscrapping;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.boot.SpringApplication;
@@ -20,6 +23,8 @@ public class WebscrappingApplication {
     @Bean
     public WebDriver getWebDriver() {
         WebDriverManager.chromedriver().setup();
-        return new ChromeDriver();
+        WebDriver webDriver=new ChromeDriver();
+        webDriver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        return webDriver;
     }
 }

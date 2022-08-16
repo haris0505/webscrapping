@@ -38,11 +38,6 @@ public class Locaters {
     }
 
 
-    public WebElement getElementByClassname(String classname){
-        return  webDriver.findElement(By.className(classname));
-
-    }
-
     // todo tagname[attribute='value'] , tagName#id ,tag.classname
     public WebElement getElementByCss(String css){
         return  webDriver.findElement(By.cssSelector(css));
